@@ -46,8 +46,8 @@ section.sec1{
     margin: auto;
     float: left;
     height: 140px;
-    width: 460px;
-    padding: 20px;
+    width: 480px;
+    padding: 10px;
     background-color: rgb(127, 141, 103);
     border-radius: 10px;
     margin-top: 10px;
@@ -56,8 +56,8 @@ section.sec2{
     margin: auto;
     float: left;
     height: 140px;
-    width: 450px;
-    padding: 20px;
+    width: 480px;
+    padding: 10px;
     background-color: rgb(127, 141, 103);
     border-radius: 10px;
     background-color: rgb(127, 141, 103);
@@ -70,18 +70,18 @@ section.sec3{
     margin: auto;
     float: left;
     height: 280px;
-    width: 960px;
+    width: 980px;
     background-color: rgba(206, 137, 9, 0.815);
     border-radius: 10px;
     margin-top: 10px;
-    padding: 20px;
+    padding: 10px;
 }
 section.sec4{
     margin: auto;
     float: left;
     height: 200px;
-    width: 960px;
-    padding: 20px;
+    width: 980px;
+    padding: 10px;
     background-color: rgb(127, 141, 103);
     border-radius: 10px;
     margin-top: 10px;
