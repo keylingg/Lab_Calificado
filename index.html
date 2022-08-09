@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos utilizando JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="Estilo_Ejemplos.css">
+</head>
+
+<body>
+    <header>Cafetería Amacener</header>
+
+    <section class="sec1">
+        <h1>Servicios</h1>
+        <div id="capa" class="ejp1">Haga clic en uno de los botones para ver nuestros servicios</div>
+
+        <input type="button" value="Pastelería"
+            onClick="$('#capa').html('Ofrecemos una gran variedad de repostería y pastelería.')">
+        <input type="button" value="Bebidas" onClick="$('#capa').html('Ofrecemos bebidas frías y calientes.')">
+    </section>
+
+    <section class="sec2">
+        <h1>Contáctanos</h1>
+        <div id="capa2" class="ejp2">Sitúa el ratón encima para ver la información</div>
+        <div id="mensaje" style="display: none">
+            <p>Teléfono: 89987765</p>
+            <p>Ubicación: Orotina, Alajuela</p>
+        </div>
+
+        <script>
+            $("#capa2").mouseenter(function (evento) {
+                $("#mensaje").css("display", "block")
+            })
+            $("#capa2").mouseleave(function (evento) {
+                $("#mensaje").css("display", "none");
+            })
+        </script>
+    </section>
+
+    <section class="sec3">
+        <h1>Productos</h1>
+        <a href="#" id="mostrar">Mostrar productos</a> / <a href="#" id="ocultar">Ocultar productos</a>
+        <ul>
+            <li><img src="https://assets.stickpng.com/images/580b57fbd9996e24bc43c0a7.png"></li>
+            <li><img src="https://assets.stickpng.com/images/580b57fbd9996e24bc43c0e8.png"></li>
+            <li><img src="https://cafe1820.com/wp-content/uploads/2020/07/cafe-frio-con-dulce-leche-1-1200x1090.png">
+            </li>
+            <li><img
+                    src="https://static8.depositphotos.com/1005586/842/i/950/depositphotos_8423511-stock-photo-donuts.jpg">
+            </li>
+        </ul>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var lista = $('li').hide();
+                $('#mostrar').click(function () {
+                    var i = 0;
+                    (function mostrarimg() {
+                        lista.eq(i++).fadeIn(400, mostrarimg);
+                    })();
+                });
+                $('#ocultar').click(function () {
+                    var i = $('li').size();
+                    (function ocultarimg() {
+                        lista.eq(--i).fadeOut(200, ocultarimg);
+                    })();
+                });
+            });
+        </script>
+    </section>
+
+    <section class="sec4">
+        <h1>¿Quiénes somos?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi id porro nemo est, quis sunt possimus
+            cupiditate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ratione voluptas voluptatum
+            illum placeat libero necessitatibus omnis adipisci! Vitae quam soluta placeat quia repudiandae voluptates
+            non quo
+            similique eos natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eligendi aliquid
+            soluta nulla animi
+            repellendus similique sed. Blanditiis aperiam, alias laboriosam minus eligendi magni quaerat dolores
+            ducimus, consequatur impedit quidem?</p>
+
+        <button id="hide">Ocultar contenido</button>
+        <button id="show">Mostrar contenido</button>
+
+        <script>
+            $(document).ready(function () {
+                $("#hide").click(function () {
+                    $("p").hide();
+                });
+                $("#show").click(function () {
+                    $("p").show();
+                });
+            });
+        </script>
+    </section>
+
+    <section class="sec5">
+        <p>Aprovechá nuestros descuentos este fin de semana. </p>
+
+        <div>
+            <img id="div1" class="desc" src="descuento.png" alt="">
+        </div>
+
+        <button id="boton1">Púlsame</button>
+
+        <script>
+            $(document).ready(function () {
+                $("#boton1").click(function () {
+                    $("#div1").animate({
+                        left: '200px',
+                        opacity: '0.5',
+                        height: '100px',
+                        width: '100px'
+                    });
+                });
+            });
+        </script>
+
+
+    </section>
+
+
+</body>
+
+</html>
