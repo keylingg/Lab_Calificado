@@ -4,6 +4,7 @@ body{
     margin: auto;
     background-color: rgb(226, 222, 159);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 14px;
 }
 p{
     text-align: justify;
